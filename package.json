@@ -1,0 +1,38 @@
+{
+  "name": "let-anything-ppx",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "esy": {
+    "build": "refmterr dune build -p let_anything_ppx",
+    "NOTE": "Optional release Section. Customizes result of `esy release`",
+    "release": {
+      "releasedBinaries": [
+        "let_anything_ppx.exe"
+      ],
+      "deleteFromBinaryRelease": [
+        "*esy_ocaml_*",
+        "*refmterr-*",
+        "ocaml-*"
+      ]
+    }
+  },
+  "dependencies": {
+    "@esy-ocaml/reason": "*",
+    "@opam/dune": ">=1.6.0",
+    "@opam/ocaml-migrate-parsetree": "*",
+    "ocaml": "^4.4.0",
+    "refmterr": "*"
+  },
+  "devDependencies": {
+    "@opam/merlin": "*",
+    "@opam/merlin-lsp": "*"
+  },
+  "resolutions": {
+    "@opam/merlin-lsp": "github:ocaml/merlin:merlin-lsp.opam#517f577"
+  }
+}

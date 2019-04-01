@@ -1,0 +1,8 @@
+(library
+   ; The namespace that other packages/libraries will access this library through
+   (name LetAnythingPpx)
+   ; Other libraries list this name in their package.json 'require' field to use this library.
+   (public_name let_anything_ppx)
+   (kind ppx_rewriter)
+   (libraries  bigarray str unix compiler-libs ocaml-migrate-parsetree )
+)
